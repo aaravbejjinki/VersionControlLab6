@@ -2,12 +2,25 @@
 #Encoder function to add 3 to each index in password
 def encoder(password):
    #intializes variable "str
-   str = ""
+   string = ""
    #for loop to get each index in password (i)
    for i in password:
        #adds 3 to each index in the original password and ensures that it is the final digit if the value is greater than 10. Places this in the string "str"
-       str += str((int(i) + 3) % 10)
-   return str
+       string += str((int(i) + 3) % 10)
+   return string
+
+
+def decoder(password):
+   #intializes variable "str
+   string = ""
+   #for loop to get each index in password (i)
+   for i in password:
+       #subtracts 3 to each index in the original password and ensures that it is th>
+       string += str((int(i) - 3) % 10)
+   return string
+
+
+
 
 
 #Main method
@@ -28,7 +41,7 @@ def main():
        #if the user chooses option 2
        elif choice == "2":
            #Prints the encoded password because you can only choose option 2 after 1. The original would be the decoded version of the encoded password.
-           print(f"The encoded password is {password}, and the original password is {decoder(passord)}.")
+           print(f"The encoded password is {password}, and the original password is {decoder(password)}.")
 
 
 #Runs the main method
